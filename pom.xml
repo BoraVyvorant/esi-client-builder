@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>dummy</groupId>
+  <artifactId>dummy</artifactId>
+  <version>0</version>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <esi.base>https://esi.tech.ccp.is/</esi.base>
+    <esi.api>_latest</esi.api>
+    <esi.source>tranquility</esi.source>
+    <gem.version>1.0.1</gem.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.swagger</groupId>
+        <artifactId>swagger-codegen-maven-plugin</artifactId>
+        <version>2.3.1</version>
+        <executions>
+          <execution>
+            <id>ruby</id>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <inputSpec>${esi.base}${esi.api}/swagger.json?datasource=${esi.source}</inputSpec>
+              <language>ruby</language>
+              <output>${project.build.directory}/esi-client-ruby</output>
+              <!-- GitHub location. -->
+              <gitUserId>BoraVyvorant</gitUserId>
+              <gitRepoId>esi-client-ruby</gitRepoId>
+              <!-- Uncomment the following if (when) you forget the options. -->
+              <!-- <configHelp>true</configHelp> -->
+              <configOptions>
+                <!-- There are many esi-client gems, but this one is mine. -->
+                <gemName>esi-client-bvv</gemName>
+                <gemVersion>${gem.version}</gemVersion>
+                <gemAuthor>Bora Vyvorant</gemAuthor>
+                <gemAuthorEmail>bora.vyvorant@gmail.com</gemAuthorEmail>
+                <gemLicense>Apache-2.0</gemLicense>
+                <moduleName>ESI</moduleName>
+              </configOptions>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

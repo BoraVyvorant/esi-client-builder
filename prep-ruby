@@ -1,0 +1,13 @@
+#!/bin/bash
+
+DIR=target/esi-client-ruby
+
+mkdir -p $DIR
+cd $DIR
+git init
+git config --local user.name "Bora Vyvorant"
+git config --local user.email bora.vyvorant@gmail.com
+git config --local github.user BoraVyvorant
+git config --local core.sshCommand "`which ssh` -i $HOME/.ssh/bora"
+git remote add origin git@github.com:BoraVyvorant/esi-client-ruby.git
+git pull origin master
