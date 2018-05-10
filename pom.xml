@@ -9,10 +9,10 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <esi.base>https://esi.tech.ccp.is/</esi.base>
+    <esi.base>https://esi.evetech.net/</esi.base>
     <esi.api>_latest</esi.api>
     <esi.source>tranquility</esi.source>
-    <gem.version>1.0.1</gem.version>
+    <gem.version>1.0.2</gem.version>
   </properties>
 
   <build>
