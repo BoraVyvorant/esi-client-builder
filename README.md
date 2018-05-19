@@ -34,7 +34,7 @@ $ mvn clean
 $ ./prep-ruby
 $ mvn compile
 $ cd target/esi-client-ruby
-$ git add .
+$ git add --all .
 $ git commit -m "This is what is new"
 $ git push --set-upstream origin master
 ```
