@@ -12,7 +12,7 @@
     <esi.base>https://esi.evetech.net/</esi.base>
     <esi.api>_latest</esi.api>
     <esi.source>tranquility</esi.source>
-    <gem.version>1.0.3</gem.version>
+    <gem.version>1.0.4</gem.version>
   </properties>
 
   <build>
