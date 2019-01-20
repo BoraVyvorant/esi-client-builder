@@ -29,6 +29,9 @@ Once the generated code exists, there are two things you might like to do:
   `git_push.sh`, but it doesn't meet my requirements (which include publishing
   as "Bora Vyvorant", rather than as his meatspace alt).
 
+Note that if you're generating a new version of the gem, you need to modify
+the project version in `pom.xml` before doing anything.
+
 ```bash
 $ mvn clean
 $ ./prep-ruby
